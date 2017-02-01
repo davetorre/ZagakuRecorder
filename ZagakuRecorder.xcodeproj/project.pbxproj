@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3618811632C9A4CF5CE65E0C /* libPods-ZagakuRecorder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F4679C85446B10D889D50F /* libPods-ZagakuRecorder.a */; };
 		C804F3AC1E41889000523F4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C804F3AB1E41889000523F4B /* main.m */; };
 		C804F3AF1E41889000523F4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C804F3AE1E41889000523F4B /* AppDelegate.m */; };
 		C804F3B21E41889000523F4B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C804F3B11E41889000523F4B /* ViewController.m */; };
 		C804F3B51E41889000523F4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C804F3B31E41889000523F4B /* Main.storyboard */; };
 		C804F3B71E41889000523F4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C804F3B61E41889000523F4B /* Assets.xcassets */; };
 		C804F3BA1E41889000523F4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C804F3B81E41889000523F4B /* LaunchScreen.storyboard */; };
+		C804F3C31E4188C500523F4B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C804F3C21E4188C500523F4B /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5DB47C1DB2AB216FB5C13ACD /* Pods-ZagakuRecorder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZagakuRecorder.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZagakuRecorder/Pods-ZagakuRecorder.release.xcconfig"; sourceTree = "<group>"; };
+		94F4679C85446B10D889D50F /* libPods-ZagakuRecorder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZagakuRecorder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC9F26DC304D2F4BDA5725CC /* Pods-ZagakuRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZagakuRecorder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZagakuRecorder/Pods-ZagakuRecorder.debug.xcconfig"; sourceTree = "<group>"; };
 		C804F3A71E41889000523F4B /* ZagakuRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZagakuRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C804F3AB1E41889000523F4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C804F3AD1E41889000523F4B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 		C804F3B61E41889000523F4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C804F3B91E41889000523F4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C804F3BB1E41889000523F4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C804F3C21E4188C500523F4B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C804F3C31E4188C500523F4B /* AudioToolbox.framework in Frameworks */,
+				3618811632C9A4CF5CE65E0C /* libPods-ZagakuRecorder.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		85AEF88446C6E294E391CB7C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AC9F26DC304D2F4BDA5725CC /* Pods-ZagakuRecorder.debug.xcconfig */,
+				5DB47C1DB2AB216FB5C13ACD /* Pods-ZagakuRecorder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C804F39E1E41889000523F4B = {
 			isa = PBXGroup;
 			children = (
 				C804F3A91E41889000523F4B /* ZagakuRecorder */,
 				C804F3A81E41889000523F4B /* Products */,
+				C804F3C11E4188C500523F4B /* Frameworks */,
+				85AEF88446C6E294E391CB7C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +98,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C804F3C11E4188C500523F4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C804F3C21E4188C500523F4B /* AudioToolbox.framework */,
+				94F4679C85446B10D889D50F /* libPods-ZagakuRecorder.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +114,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C804F3BE1E41889000523F4B /* Build configuration list for PBXNativeTarget "ZagakuRecorder" */;
 			buildPhases = (
+				E30A4670B3270F0B63D791AF /* [CP] Check Pods Manifest.lock */,
 				C804F3A31E41889000523F4B /* Sources */,
 				C804F3A41E41889000523F4B /* Frameworks */,
 				C804F3A51E41889000523F4B /* Resources */,
+				B50653F14D5781256C6668BA /* [CP] Embed Pods Frameworks */,
+				3DDF365FDAD0CDA09C268765 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +176,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DDF365FDAD0CDA09C268765 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZagakuRecorder/Pods-ZagakuRecorder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B50653F14D5781256C6668BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZagakuRecorder/Pods-ZagakuRecorder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E30A4670B3270F0B63D791AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C804F3A31E41889000523F4B /* Sources */ = {
@@ -269,6 +348,7 @@
 		};
 		C804F3BF1E41889000523F4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC9F26DC304D2F4BDA5725CC /* Pods-ZagakuRecorder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8Z2FQM4H7M;
@@ -281,6 +361,7 @@
 		};
 		C804F3C01E41889000523F4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DB47C1DB2AB216FB5C13ACD /* Pods-ZagakuRecorder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8Z2FQM4H7M;
