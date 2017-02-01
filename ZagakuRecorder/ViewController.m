@@ -55,6 +55,7 @@ static OSStatus recordingCallback(void *InRefCon,
 //    for (int i = 0; i < inNumberFrames; i++) {
 //        printf("%i\n", frameBuffer[i]);
 //    }
+
     
     return noErr;
 }
@@ -140,17 +141,49 @@ static OSStatus recordingCallback(void *InRefCon,
     
     // Initialize recorder
     CheckStatus(AudioUnitInitialize(recorder), "recorder setup 6");
+    
+    
+    // Create output file with audio format
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *appFile = [documentsDirectory stringByAppendingPathComponent:@"audiofile.wav"];
+    NSURL *audioFileURL = [NSURL URLWithString:appFile];
+    CheckStatus(ExtAudioFileCreateWithURL((__bridge CFURLRef)audioFileURL,
+                                          kAudioFileWAVEType,
+                                          &audioFormat,
+                                          NULL,
+                                          kAudioFileFlags_EraseFile,
+                                          &audioFileRef),
+                "recorder setup 7");
+    CheckStatus(ExtAudioFileSetProperty(audioFileRef,
+                                        kExtAudioFileProperty_ClientDataFormat,
+                                        sizeof(audioFormat),
+                                        &audioFormat),
+                "recorder setup 8");
 }
 
 - (void)printSamples:(NSTimer *)timer {
     int32_t availableBytes;
     SInt16 *buffer = TPCircularBufferTail(&circularBuffer, &availableBytes);
     int numSamples = 22050;
-//    memcpy(targetBuffer, buffer, MIN(numSamples * sizeof(SInt16), availableBytes));
-    printf("new group\n");
-    for (int i = 0; i < numSamples; i++) {
-        printf("%i\n", buffer[i]);
+// //   memcpy(targetBuffer, buffer, MIN(numSamples * sizeof(SInt16), availableBytes));
+//    printf("new group\n");
+//    for (int i = 0; i < numSamples; i++) {
+//        printf("%i\n", buffer[i]);
+//    }
+    AudioBuffer buffer2;
+    buffer2.mNumberChannels = 1;
+    buffer2.mDataByteSize = numSamples * sizeof(SInt16);
+    buffer2.mData = malloc(buffer2.mDataByteSize);
+    AudioBufferList bufferList;
+    bufferList.mNumberBuffers = 1;
+    bufferList.mBuffers[0] = buffer2;
+    buffer2.mData = buffer;
+    OSStatus status = ExtAudioFileWrite(audioFileRef, numSamples, &bufferList);
+    if (status != noErr) {
+        printf("record callback 2\n");
     }
+    
     TPCircularBufferConsume(&circularBuffer, numSamples);
     
 }
@@ -199,6 +232,10 @@ static OSStatus recordingCallback(void *InRefCon,
 //    }
     [timer invalidate];
     timer = nil;
+    CheckStatus(ExtAudioFileDispose(audioFileRef), "stop recorder 3");
+    NSURL *location = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory
+                                                              inDomains:NSUserDomainMask] lastObject];
+    NSLog(@"Audio file in: %@", location);
     NSLog(@"stopped recording");
 }
 
