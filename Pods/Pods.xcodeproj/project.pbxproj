@@ -7,118 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		001C6FA9878866E8E6F01F1A13894C7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D03A078E7BF6497E61430C44068BC8F /* Foundation.framework */; };
-		1EC49A6B1316E139214BBB30A059030E /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 75F80E1CB4064395DA4278AD5CC66DA0 /* TPCircularBuffer+AudioBufferList.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		3A9D1E390FC181292D59B751D590B767 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 82DCA6340B84F836CCED821A1F27F1F7 /* TPCircularBuffer.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6312475CBD8C9C65AA140825EB536CCA /* TPCircularBuffer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF30010A70237B01B95A63FB689D688 /* TPCircularBuffer-dummy.m */; };
-		77AE0E65D6D52B0E2D74CE64DA5AD3D7 /* TPCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 356206E4FB54F48D36371660DC689F4C /* TPCircularBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		81D2CF945E67AA9E201807E8743F4049 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D03A078E7BF6497E61430C44068BC8F /* Foundation.framework */; };
-		850A3BCB30D71F1B576F83E7441428D0 /* TPCircularBuffer+AudioBufferList.h in Headers */ = {isa = PBXBuildFile; fileRef = 93E6A1970F07F5D1266992D9F16D0C64 /* TPCircularBuffer+AudioBufferList.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B297F956930297DB8B28E07B9B28DA98 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB17216CB74EACC1099B10E835FBDC4 /* AudioToolbox.framework */; };
-		E4EF484799916D8CCE602FB48CC77AB4 /* Pods-ZagakuRecorder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2444217289225F7FD3C502F8DF3C17 /* Pods-ZagakuRecorder-dummy.m */; };
+		6AB19E81CFF54ADF50246A3E449D77D2 /* Pods-ZagakuRecorder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2444217289225F7FD3C502F8DF3C17 /* Pods-ZagakuRecorder-dummy.m */; };
+		D4BDB3012603E2C4B97FA6DFF9A7CC94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0F153D65E1FC59671DFB816C00C27DBC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1FBC5468CE6FBD6E9860BB2C1ECC05CC;
-			remoteInfo = TPCircularBuffer;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		04E62D08C2BF41A364A8538AA044E6B4 /* Pods-ZagakuRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZagakuRecorder.debug.xcconfig"; sourceTree = "<group>"; };
-		0C9712C6CF3F3AF07907BA8EC81BA5DB /* TPCircularBuffer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TPCircularBuffer.xcconfig; sourceTree = "<group>"; };
 		150996207CA0500CC70892E2A78D2942 /* Pods-ZagakuRecorder-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZagakuRecorder-acknowledgements.markdown"; sourceTree = "<group>"; };
-		356206E4FB54F48D36371660DC689F4C /* TPCircularBuffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
-		6EB441719C933C88413D1924D5567C0F /* libTPCircularBuffer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libTPCircularBuffer.a; path = libTPCircularBuffer.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		75F80E1CB4064395DA4278AD5CC66DA0 /* TPCircularBuffer+AudioBufferList.c */ = {isa = PBXFileReference; includeInIndex = 1; path = "TPCircularBuffer+AudioBufferList.c"; sourceTree = "<group>"; };
-		7D03A078E7BF6497E61430C44068BC8F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		82DCA6340B84F836CCED821A1F27F1F7 /* TPCircularBuffer.c */ = {isa = PBXFileReference; includeInIndex = 1; path = TPCircularBuffer.c; sourceTree = "<group>"; };
 		8A2444217289225F7FD3C502F8DF3C17 /* Pods-ZagakuRecorder-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZagakuRecorder-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93E6A1970F07F5D1266992D9F16D0C64 /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
 		9745225635A9343537EADD296CAA1E98 /* Pods-ZagakuRecorder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZagakuRecorder.release.xcconfig"; sourceTree = "<group>"; };
 		A23F870539C5EFF72F617428DC9D3577 /* Pods-ZagakuRecorder-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZagakuRecorder-acknowledgements.plist"; sourceTree = "<group>"; };
 		A9DEA24AA6D5677000858E23F63C3D10 /* Pods-ZagakuRecorder-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZagakuRecorder-resources.sh"; sourceTree = "<group>"; };
 		B2084278AC23661600AA9E9CD6048BC5 /* Pods-ZagakuRecorder-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZagakuRecorder-frameworks.sh"; sourceTree = "<group>"; };
-		BDB17216CB74EACC1099B10E835FBDC4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
-		CFF30010A70237B01B95A63FB689D688 /* TPCircularBuffer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TPCircularBuffer-dummy.m"; sourceTree = "<group>"; };
-		ED110B828ECCA73CD6656A45D06BAC62 /* TPCircularBuffer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer-prefix.pch"; sourceTree = "<group>"; };
-		F9C8D8F7C81323B435E0DD4EDA39BF6B /* libPods-ZagakuRecorder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ZagakuRecorder.a"; path = "libPods-ZagakuRecorder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EF48DD855FF8B81210D7C797DCA7F04E /* libPods-ZagakuRecorder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ZagakuRecorder.a"; path = "libPods-ZagakuRecorder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5222CEADEEB062DF3BD5EAE2EBB8F5F3 /* Frameworks */ = {
+		25AACCE3003654314FB2F56C7EE2A931 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				001C6FA9878866E8E6F01F1A13894C7C /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BC125DA825CB016BF325B60A81A1A6F7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B297F956930297DB8B28E07B9B28DA98 /* AudioToolbox.framework in Frameworks */,
-				81D2CF945E67AA9E201807E8743F4049 /* Foundation.framework in Frameworks */,
+				D4BDB3012603E2C4B97FA6DFF9A7CC94 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1608799D0EC65D37C6660B349E9FFED9 /* Support Files */ = {
+		48BD65AC2ECFF447C5C6226E14EA5385 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0C9712C6CF3F3AF07907BA8EC81BA5DB /* TPCircularBuffer.xcconfig */,
-				CFF30010A70237B01B95A63FB689D688 /* TPCircularBuffer-dummy.m */,
-				ED110B828ECCA73CD6656A45D06BAC62 /* TPCircularBuffer-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/TPCircularBuffer";
-			sourceTree = "<group>";
-		};
-		222FA8D5F18100EEE3112A5326FAD2B4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F9C8D8F7C81323B435E0DD4EDA39BF6B /* libPods-ZagakuRecorder.a */,
-				6EB441719C933C88413D1924D5567C0F /* libTPCircularBuffer.a */,
+				EF48DD855FF8B81210D7C797DCA7F04E /* libPods-ZagakuRecorder.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		3D3085E2B5DFA75832BF19C48E7CDA02 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				BDB17216CB74EACC1099B10E835FBDC4 /* AudioToolbox.framework */,
-				7D03A078E7BF6497E61430C44068BC8F /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		410ED8CA0600151E896EC0C472405B1F /* TPCircularBuffer */ = {
-			isa = PBXGroup;
-			children = (
-				82DCA6340B84F836CCED821A1F27F1F7 /* TPCircularBuffer.c */,
-				356206E4FB54F48D36371660DC689F4C /* TPCircularBuffer.h */,
-				75F80E1CB4064395DA4278AD5CC66DA0 /* TPCircularBuffer+AudioBufferList.c */,
-				93E6A1970F07F5D1266992D9F16D0C64 /* TPCircularBuffer+AudioBufferList.h */,
-				1608799D0EC65D37C6660B349E9FFED9 /* Support Files */,
-			);
-			name = TPCircularBuffer;
-			path = TPCircularBuffer;
-			sourceTree = "<group>";
-		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3D3085E2B5DFA75832BF19C48E7CDA02 /* iOS */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		666E9D94C3501F6397EF5DDD7E9D82E7 /* Targets Support Files */ = {
@@ -129,23 +52,30 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				A5A6FB53B497502F8974C5EF73875150 /* Pods */,
-				222FA8D5F18100EEE3112A5326FAD2B4 /* Products */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				48BD65AC2ECFF447C5C6226E14EA5385 /* Products */,
 				666E9D94C3501F6397EF5DDD7E9D82E7 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A5A6FB53B497502F8974C5EF73875150 /* Pods */ = {
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				410ED8CA0600151E896EC0C472405B1F /* TPCircularBuffer */,
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F8BF9184D1D43100F5AF5319A9590D45 /* Pods-ZagakuRecorder */ = {
@@ -165,51 +95,21 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		A153EB64B3D181FF4E92D03F1BBD2A94 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				850A3BCB30D71F1B576F83E7441428D0 /* TPCircularBuffer+AudioBufferList.h in Headers */,
-				77AE0E65D6D52B0E2D74CE64DA5AD3D7 /* TPCircularBuffer.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		1FBC5468CE6FBD6E9860BB2C1ECC05CC /* TPCircularBuffer */ = {
+		F14B95FFDD81E4FDF86D534BD92DF052 /* Pods-ZagakuRecorder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AEFD8369CBEF8EF0170D8D5D5F007829 /* Build configuration list for PBXNativeTarget "TPCircularBuffer" */;
+			buildConfigurationList = 0F7E678F30BFB3BE94ACC0F4FD55281F /* Build configuration list for PBXNativeTarget "Pods-ZagakuRecorder" */;
 			buildPhases = (
-				DCB96FF8C2AF4E3EA4BDDA6BC515ACE4 /* Sources */,
-				BC125DA825CB016BF325B60A81A1A6F7 /* Frameworks */,
-				A153EB64B3D181FF4E92D03F1BBD2A94 /* Headers */,
+				28E0591BF4F1838C970827CB01C67B88 /* Sources */,
+				25AACCE3003654314FB2F56C7EE2A931 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = TPCircularBuffer;
-			productName = TPCircularBuffer;
-			productReference = 6EB441719C933C88413D1924D5567C0F /* libTPCircularBuffer.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		2F70FDD63F06BA40FA063B0171C88CC8 /* Pods-ZagakuRecorder */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 271DF79647D1506B78AF32FDDAC43064 /* Build configuration list for PBXNativeTarget "Pods-ZagakuRecorder" */;
-			buildPhases = (
-				FA89EC4CC885EF8B7F2471D1E288D46C /* Sources */,
-				5222CEADEEB062DF3BD5EAE2EBB8F5F3 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				92F669605D93BA933BCFC40CE5A5975B /* PBXTargetDependency */,
 			);
 			name = "Pods-ZagakuRecorder";
 			productName = "Pods-ZagakuRecorder";
-			productReference = F9C8D8F7C81323B435E0DD4EDA39BF6B /* libPods-ZagakuRecorder.a */;
+			productReference = EF48DD855FF8B81210D7C797DCA7F04E /* libPods-ZagakuRecorder.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -229,71 +129,28 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 222FA8D5F18100EEE3112A5326FAD2B4 /* Products */;
+			productRefGroup = 48BD65AC2ECFF447C5C6226E14EA5385 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2F70FDD63F06BA40FA063B0171C88CC8 /* Pods-ZagakuRecorder */,
-				1FBC5468CE6FBD6E9860BB2C1ECC05CC /* TPCircularBuffer */,
+				F14B95FFDD81E4FDF86D534BD92DF052 /* Pods-ZagakuRecorder */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DCB96FF8C2AF4E3EA4BDDA6BC515ACE4 /* Sources */ = {
+		28E0591BF4F1838C970827CB01C67B88 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EC49A6B1316E139214BBB30A059030E /* TPCircularBuffer+AudioBufferList.c in Sources */,
-				6312475CBD8C9C65AA140825EB536CCA /* TPCircularBuffer-dummy.m in Sources */,
-				3A9D1E390FC181292D59B751D590B767 /* TPCircularBuffer.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FA89EC4CC885EF8B7F2471D1E288D46C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E4EF484799916D8CCE602FB48CC77AB4 /* Pods-ZagakuRecorder-dummy.m in Sources */,
+				6AB19E81CFF54ADF50246A3E449D77D2 /* Pods-ZagakuRecorder-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		92F669605D93BA933BCFC40CE5A5975B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TPCircularBuffer;
-			target = 1FBC5468CE6FBD6E9860BB2C1ECC05CC /* TPCircularBuffer */;
-			targetProxy = 0F153D65E1FC59671DFB816C00C27DBC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		36C416C70D9B188A335796C20D9C0313 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C9712C6CF3F3AF07907BA8EC81BA5DB /* TPCircularBuffer.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TPCircularBuffer/TPCircularBuffer-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		54B1D48F832BE21DC652F8A07EDCBAFC /* Release */ = {
+		290B7E505FAF38CFB655D907D8DF4A06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9745225635A9343537EADD296CAA1E98 /* Pods-ZagakuRecorder.release.xcconfig */;
 			buildSettings = {
@@ -315,6 +172,29 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
+		};
+		362EEB4AA8A95B2AFB9BA40FE75AC804 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04E62D08C2BF41A364A8538AA044E6B4 /* Pods-ZagakuRecorder.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
 		};
 		CACE7C8415F53E79F07C6BBE57F0F61D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -357,52 +237,6 @@
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		DEAD7E1063A63AA47681F0A9D5241CDD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C9712C6CF3F3AF07907BA8EC81BA5DB /* TPCircularBuffer.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TPCircularBuffer/TPCircularBuffer-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		E3B2FD35E1D7266F17A4083BB79FAEC0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04E62D08C2BF41A364A8538AA044E6B4 /* Pods-ZagakuRecorder.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -449,11 +283,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		271DF79647D1506B78AF32FDDAC43064 /* Build configuration list for PBXNativeTarget "Pods-ZagakuRecorder" */ = {
+		0F7E678F30BFB3BE94ACC0F4FD55281F /* Build configuration list for PBXNativeTarget "Pods-ZagakuRecorder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E3B2FD35E1D7266F17A4083BB79FAEC0 /* Debug */,
-				54B1D48F832BE21DC652F8A07EDCBAFC /* Release */,
+				362EEB4AA8A95B2AFB9BA40FE75AC804 /* Debug */,
+				290B7E505FAF38CFB655D907D8DF4A06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -463,15 +297,6 @@
 			buildConfigurations = (
 				CACE7C8415F53E79F07C6BBE57F0F61D /* Debug */,
 				ED4FC68AB2A4E06C718CFF338F6F156B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AEFD8369CBEF8EF0170D8D5D5F007829 /* Build configuration list for PBXNativeTarget "TPCircularBuffer" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DEAD7E1063A63AA47681F0A9D5241CDD /* Debug */,
-				36C416C70D9B188A335796C20D9C0313 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

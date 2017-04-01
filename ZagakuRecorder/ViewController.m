@@ -1,7 +1,6 @@
 #import "ViewController.h"
 @import AudioToolbox;
 @import AVFoundation;
-#import "TPCircularBuffer.h"
 
 @interface ViewController ()
 @end
@@ -26,7 +25,6 @@ static void CheckStatus(OSStatus error, const char *operation) {
 
 AudioComponentInstance recorder;
 ExtAudioFileRef audioFileRef;
-TPCircularBuffer circularBuffer;
 NSTimer *timer;
 
 static OSStatus recordingCallback(void *InRefCon,
@@ -48,14 +46,11 @@ static OSStatus recordingCallback(void *InRefCon,
         printf("record callback 1\n");
         return -1;
     }
-    TPCircularBufferProduceBytes(&circularBuffer, bufferList.mBuffers[0].mData, buffer.mDataByteSize);
-
-    
-//    SInt16 *frameBuffer = buffer.mData;
-//    for (int i = 0; i < inNumberFrames; i++) {
-//        printf("%i\n", frameBuffer[i]);
-//    }
-
+    status = ExtAudioFileWriteAsync(audioFileRef, inNumberFrames, &bufferList);
+    if (status != noErr) {
+        printf("record callback 2\n");
+        return -1;
+    }
     
     return noErr;
 }
@@ -66,8 +61,6 @@ static OSStatus recordingCallback(void *InRefCon,
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupRecorder];
-    int bufferLength = 44100;
-    TPCircularBufferInit(&circularBuffer, bufferLength);
 }
 
 
@@ -162,32 +155,6 @@ static OSStatus recordingCallback(void *InRefCon,
                 "recorder setup 8");
 }
 
-- (void)printSamples:(NSTimer *)timer {
-    int32_t availableBytes;
-    SInt16 *buffer = TPCircularBufferTail(&circularBuffer, &availableBytes);
-    int numSamples = 22050;
-// //   memcpy(targetBuffer, buffer, MIN(numSamples * sizeof(SInt16), availableBytes));
-//    printf("new group\n");
-//    for (int i = 0; i < numSamples; i++) {
-//        printf("%i\n", buffer[i]);
-//    }
-    AudioBuffer buffer2;
-    buffer2.mNumberChannels = 1;
-    buffer2.mDataByteSize = numSamples * sizeof(SInt16);
-    buffer2.mData = malloc(buffer2.mDataByteSize);
-    AudioBufferList bufferList;
-    bufferList.mNumberBuffers = 1;
-    bufferList.mBuffers[0] = buffer2;
-    buffer2.mData = buffer;
-    OSStatus status = ExtAudioFileWrite(audioFileRef, numSamples, &bufferList);
-    if (status != noErr) {
-        printf("record callback 2\n");
-    }
-    
-    TPCircularBufferConsume(&circularBuffer, numSamples);
-    
-}
-
 - (IBAction)recordButtonPressed:(id)sender {
     NSError *error;
     [[AVAudioSession sharedInstance] setActive:YES error:&error];
@@ -201,15 +168,6 @@ static OSStatus recordingCallback(void *InRefCon,
     [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
         if (granted) {
             CheckStatus(AudioOutputUnitStart(recorder), "record 3");
-            timer = [NSTimer scheduledTimerWithTimeInterval:0.5
-                                                     target:self
-                                                   selector:@selector(printSamples:)
-                                                   userInfo:nil
-                                                    repeats:YES];
-//            dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-//            dispatch_async(queue, ^{
-//                NSLog(@"hi mom");
-//            });
             NSLog(@"started recording");
         } else {
             NSLog(@"No permission");
@@ -225,13 +183,6 @@ static OSStatus recordingCallback(void *InRefCon,
     if (error != nil) {
         NSAssert(error == nil, @"stop recorder 2");
     }
-//    int32_t availableBytes = 22050;
-//    SInt16 *buffer = TPCircularBufferTail(&circularBuffer, &availableBytes);
-//    for (int i = 0; i < availableBytes; i++) {
-//        printf("%i\n", buffer[i]);
-//    }
-    [timer invalidate];
-    timer = nil;
     CheckStatus(ExtAudioFileDispose(audioFileRef), "stop recorder 3");
     NSURL *location = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory
                                                               inDomains:NSUserDomainMask] lastObject];

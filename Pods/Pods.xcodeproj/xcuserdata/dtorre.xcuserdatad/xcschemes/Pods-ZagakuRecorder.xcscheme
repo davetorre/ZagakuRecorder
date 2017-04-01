@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '2F70FDD63F06BA40FA063B0171C88CC8'
+               BlueprintIdentifier = 'F14B95FFDD81E4FDF86D534BD92DF052'
                BlueprintName = 'Pods-ZagakuRecorder'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-ZagakuRecorder.a'>
